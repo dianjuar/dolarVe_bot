@@ -4,7 +4,7 @@ from threading import Thread
 import urllib2
 
 endpoint = "https://s3.amazonaws.com/dolartoday/data.json"
-update_delay = 3600
+update_delay = 1800
 last_update = None
 data = None
 old_data = None
