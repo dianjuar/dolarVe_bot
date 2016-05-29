@@ -20,6 +20,7 @@ import re
 from telegram import InlineQueryResultArticle, ParseMode, \
     InputTextMessageContent
 from telegram.ext import Updater, InlineQueryHandler, CommandHandler
+from DolarToday import get_dolar
 import logging
 
 # Enable logging
@@ -28,7 +29,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 logger = logging.getLogger(__name__)
 
-dolarEfective = 976.66
+dolarEfective = get_dolar()
 
 
 # Define a few command handlers. These usually take the two arguments bot and
