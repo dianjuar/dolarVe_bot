@@ -29,7 +29,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 logger = logging.getLogger(__name__)
 
-dolarEfective = get_dolar()
+get_dolar()
 
 
 # Define a few command handlers. These usually take the two arguments bot and
@@ -68,10 +68,10 @@ def inlinequery(bot, update):
 
 
         convertions.append( str(userQuery)+"Bs -> $ = " + 
-            str( "%.2f" % (userQuery/dolarEfective) +'$' ) )
+            str( "%.2f" % (userQuery/get_dolar()) +'$' ) )
 
         convertions.append( str(userQuery)+"$ -> Bs = " + 
-            str( "%.2f" % (userQuery*dolarEfective) +'Bs' ) )
+            str( "%.2f" % (userQuery*get_dolar()) +'Bs' ) )
 
 
         for r in convertions:
