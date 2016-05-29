@@ -66,12 +66,12 @@ def inlinequery(bot, update):
         #3 Bs->€
         '''
 
-
+        dolar_efectivo = get_dolar()
         convertions.append( str(userQuery)+"Bs -> $ = " + 
-            str( "%.2f" % (userQuery/get_dolar()) +'$' ) )
+            str( "%.2f" % (userQuery/dolar_efectivo) +'$' ) )
 
         convertions.append( str(userQuery)+"$ -> Bs = " + 
-            str( "%.2f" % (userQuery*get_dolar()) +'Bs' ) )
+            str( "%.2f" % (userQuery*dolar_efectivo) +'Bs' ) )
 
 
         for r in convertions:
